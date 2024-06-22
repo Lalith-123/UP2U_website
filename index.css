@@ -1,0 +1,294 @@
+body {
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* First */
+/* First */
+.First {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; /* Ensure text is centered horizontally */
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.627);
+}
+
+/* Second */
+.Second{
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.image-container_1 {
+    flex: 1;
+    width: 30%;
+}
+.text-container {
+    flex: 1;
+    padding: 20px;
+}
+/* Responsive layout */
+@media (max-width: 950px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-container {
+        padding: 10px;
+    }
+    .image-container_1{
+        width: 80%;
+    }
+}
+
+/* Third */
+/* .Third{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Card-store{
+    background-color: whitesmoke;
+    margin: 50px 0px;
+    width: 80%;
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Card {
+    width: 20%;
+    height: 400px;
+    background-color: blueviolet;
+    position: relative;
+}
+
+.Card img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.Card h4{
+    position: absolute;
+    left: 15px;
+    font-size: 25px;
+    color: white;
+} */
+
+/* Third */
+.Third {
+    background-color: white;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+}
+
+.Card-store {
+    background-color: whitesmoke;
+    margin: 50px 0px;
+    width: 80%;
+    height: 450px;
+    justify-content: space-between;
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.Card {
+    height: 400px;
+    margin: 25px 20px;
+    background-color: blueviolet;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.Card h4 {
+    position: relative;
+    z-index: 1;
+    /* left: 15px; */
+    font-size: 25px;
+    color: white;
+}
+
+/* Slick Carousel Arrows */
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* .Third {
+    margin-top: 20px;
+}
+
+.Card-store {
+    display: flex;
+    align-items: center;
+}
+
+.Card {
+    width: 200px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.Card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+} */
+
+.message-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: white;
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.message-content {
+    /* position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+    margin: 50px auto;
+    width: 80%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: #ff0000;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1060px) {
+    .gallery {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .gallery {
+        width: 90%;
+    }
+}
+
+.gallery > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.gallery .tall {
+    grid-row: span 2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
